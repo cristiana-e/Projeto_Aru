@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float JumpForce;
     public Rigidbody2D rig; //física do player
     public Animator anim; //variável para indicar a animação
+    public GameObject bubble; 
 
     bool IsJumping;
     private int JumpCont = 0;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Jump();
+        Fire();
     }
 
     //Função para o movimento
@@ -70,6 +72,15 @@ public class Player : MonoBehaviour
             anim.SetInteger("transition", 2);
             IsJumping = true;
 
+        }
+    }
+
+    void Fire()
+    {
+        if (Input.GetKeyDown("e"))
+        {
+            // Criando uma nova bolha
+            Instantiate(bubble, transform.position, Quaternion.identity);
         }
     }
 
