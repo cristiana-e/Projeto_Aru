@@ -8,26 +8,28 @@ public class Player : MonoBehaviour
     public float JumpForce;
     public Rigidbody2D rig; //física do player
     public Animator anim; //variável para indicar a animação
-    public GameObject bubble; 
+    public GameObject bubble;
 
-    bool IsJumping;
-    private int JumpCont = 0;
-
-    
+    //bool IsJumping;
+    bool IsGrounded;
+    public int JumpCont = 2;
+    bool CanJump;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        Jump();
+        InputCheck();
         Fire();
+
     }
+
 
     //Função para o movimento
     void Move()
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour
 
         if (horizontal > 0f)
         {
-            if (IsJumping == false) //Para nao sobressair a animacao do pulo
+            if (IsGrounded == true) //Para nao sobressair a animacao do pulo
             {
                 transform.eulerAngles = new Vector2(0f, 0f);
                 anim.SetInteger("transition", 1);
@@ -46,7 +48,7 @@ public class Player : MonoBehaviour
 
         if (horizontal < 0f)
         {
-            if (IsJumping == false) //Para nao sobressair a animacao do pulo
+            if (IsGrounded == true)  //Para nao sobressair a animacao do pulo
             {
                 transform.eulerAngles = new Vector2(0f, 180f);
                 anim.SetInteger("transition", 1);
@@ -55,7 +57,7 @@ public class Player : MonoBehaviour
 
         if (horizontal == 0)
         {
-            if (IsJumping == false) //Para nao sobressair a animacao do pulo
+            if (IsGrounded == true)  //Para nao sobressair a animacao do pulo
             {
                 anim.SetInteger("transition", 0);
             }
@@ -63,16 +65,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    //C
+    void InputCheck()
+    {
+        
+        if (Input.GetButtonDown("Jump") && JumpCont >= 1)
+        {
+            Jump();
+        }
+    }
+
     //Função para o pulo
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && IsJumping==false)
-        {
+            JumpCont=JumpCont-1;
             rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
             anim.SetInteger("transition", 2);
-            IsJumping = true;
+        
 
-        }
     }
 
     void Fire()
@@ -89,10 +99,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            IsJumping = false;
-            JumpCont = 0;
+            IsGrounded = true;
+            JumpCont = 2;
         }
     }
-
 
 }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemie_flame
+  m_Name: Enemie_flame_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,23 +21,23 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 175435bf8de33cb48884cd40895a66b3, type: 3}
-    - time: 0.1
-      value: {fileID: 21300000, guid: 708af087a65d53347a745a3f75dd6447, type: 3}
     - time: 0.15
+      value: {fileID: 21300000, guid: 708af087a65d53347a745a3f75dd6447, type: 3}
+    - time: 0.225
       value: {fileID: 21300000, guid: f32d006fc0ff5b649883ce8797b16a65, type: 3}
-    - time: 0.21666667
+    - time: 0.325
       value: {fileID: 21300000, guid: 8fbaa45a30bb0234f94dd7a517ab5c02, type: 3}
-    - time: 0.3
-      value: {fileID: 21300000, guid: 61cb9b5aa66ccc541a1f64774349b059, type: 3}
-    - time: 0.4
-      value: {fileID: 21300000, guid: abd31ac75769e964bb467d14ae479087, type: 3}
     - time: 0.45
+      value: {fileID: 21300000, guid: 61cb9b5aa66ccc541a1f64774349b059, type: 3}
+    - time: 0.6
+      value: {fileID: 21300000, guid: abd31ac75769e964bb467d14ae479087, type: 3}
+    - time: 0.675
       value: {fileID: 21300000, guid: 52280ccb22cc93549908141d45d082f2, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 40
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -64,7 +64,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.46666667
+    m_StopTime: 0.7
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
