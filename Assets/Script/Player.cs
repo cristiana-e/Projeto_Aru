@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     //bool IsJumping;
     bool IsGrounded;
     public int JumpCont = 2;
-    bool CanJump;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
         if (horizontal == 0)
         {
-            if (IsGrounded == true)  //Para nao sobressair a animacao do pulo
+            if (IsGrounded == true )  //Para nao sobressair a animacao do pulo
             {
                 anim.SetInteger("transition", 0);
             }
@@ -71,17 +71,23 @@ public class Player : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && JumpCont >= 1)
         {
+            anim.SetInteger("transition", 2);
             Jump();
+            
         }
     }
 
     //Função para o pulo
     void Jump()
     {
-            JumpCont=JumpCont-1;
+            
+            JumpCont =JumpCont-1;
+
             rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+            IsGrounded = false;
             anim.SetInteger("transition", 2);
-        
+
+
 
     }
 
