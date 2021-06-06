@@ -5,7 +5,7 @@ using UnityEngine;
 public class Acid : MonoBehaviour
 {
     public float speed = 2;
-    // É chamado apenas uma vez quando a bala é criada
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,5 +15,12 @@ public class Acid : MonoBehaviour
         rb.velocity = new Vector2(0, speed);
     }
 
- 
+    void OnTriggerEnter2D(Collider2D outro)
+    {
+        if (outro.gameObject.tag == "Soil2")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 }
