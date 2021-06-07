@@ -145,5 +145,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f570676bc5d094f82e7b30d34f82ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubble: {fileID: 0}
+  bubble: {fileID: 3729160020478045601}
   speed: 10

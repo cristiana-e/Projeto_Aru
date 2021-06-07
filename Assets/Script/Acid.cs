@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Acid : MonoBehaviour
 {
-    public float speed = 2;
+    public float speed = 10;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        // Ajusta a velocidade Y para fazer a bala se mover para cima
+        Move();
+        Destroy();
+    }
+    void Move()
+    {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, speed);
     }
@@ -23,4 +27,8 @@ public class Acid : MonoBehaviour
         }
     }
 
+    void Destroy()
+    {
+        Destroy(gameObject, 3);
+    }
 }

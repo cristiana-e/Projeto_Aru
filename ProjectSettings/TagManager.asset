@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Soil2
+  - Soil1
+  - Wood
+  - Tree
+  - Aru
   layers:
   - Default
   - TransparentFX

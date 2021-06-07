@@ -18,14 +18,8 @@ public class Bubble : MonoBehaviour
     void Update()
     {
      
-       // Fire();
-    }
-// void Move()
-   // {
-//        float horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
- //       transform.Translate(horizontal, 0, 0);// Aplicando as mudanças
 
-//    }
+    }
 
     void OnBecameInvisible()
     {

@@ -13,17 +13,19 @@ public class Player : MonoBehaviour
     //bool IsJumping;
     bool IsGrounded;
     public int JumpCont = 2;
-    
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Move();
         InputCheck();
         Fire();

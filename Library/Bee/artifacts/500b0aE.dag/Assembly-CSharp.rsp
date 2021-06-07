@@ -363,6 +363,9 @@
 "Assets/Script/Player.cs"
 "Assets/Script/Saw.cs"
 "Assets/Script/Spawn.cs"
+"Assets/Script/Tree_Trigger.cs"
+"Assets/Script/Wood.cs"
+"Assets/Script/Wood_Spawn.cs"
 -langversion:8.0
 
 /deterministic
