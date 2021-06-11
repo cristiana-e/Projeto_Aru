@@ -16,7 +16,6 @@ public class flame_atc : MonoBehaviour
         // Chamar a função 'addEnemy' a cada 'spawnTime' segundos
         InvokeRepeating("AddEnemy", 1, spawnTime);
 
-
     }
 
     // Nova função para clonar/spawn uma serra
@@ -24,5 +23,15 @@ public class flame_atc : MonoBehaviour
     {
         // Criar uma serra
         Instantiate(bola_de_fogo, exit_flame.transform.position, Quaternion.identity);
+    }
+
+    void OnTriggerEnter2D(Collider2D outro)
+    {
+        if (outro.gameObject.tag == "bubble")
+        {
+            Destroy(outro.gameObject);
+            Destroy(this.gameObject);
+
+        }
     }
 }
