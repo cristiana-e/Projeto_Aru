@@ -2571,7 +2571,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.02, y: 1.26, z: 0}
   m_LocalScale: {x: 1.0149, y: 0.9405, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 454355531}
+  - {fileID: 1290836570}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2588,6 +2590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toxic_ball2: {fileID: 1195622598490418083, guid: aa30b79b1108c4e47b03f9f89b9791e7, type: 3}
+  toxic_attack01: {fileID: 454355530}
   spawnTime: 5
 --- !u!114 &350641448
 MonoBehaviour:
@@ -2602,6 +2605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toxic_ball: {fileID: 2594061908261745527, guid: 2479090ef7b76d1448440b06a6084594, type: 3}
+  toxic_attack02: {fileID: 1290836569}
   spawnTime: 3
 --- !u!1 &382777642
 GameObject:
@@ -2850,7 +2854,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.53, y: 1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1516977497}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2867,6 +2872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola_de_fogo: {fileID: 5932683139251030462, guid: 58a444eae8f90d548b861fc4372e6cce, type: 3}
+  Flame_attack: {fileID: 1516977496}
   spawnTime: 2
 --- !u!95 &411638315
 Animator:
@@ -2970,6 +2976,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &454355530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454355531}
+  m_Layer: 0
+  m_Name: toxic_attack01
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454355531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454355530}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5222177, y: 1.0101011, z: -70.93757}
+  m_LocalScale: {x: 0.9853187, y: 1.0632643, z: 1}
+  m_Children: []
+  m_Father: {fileID: 350641446}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477230062
 GameObject:
   m_ObjectHideFlags: 0
@@ -11115,6 +11151,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7591726744231251378, guid: 87635965aa90e20418f7233f4168ac7f, type: 3}
   m_PrefabInstance: {fileID: 7591726743020426600}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1290836569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290836570}
+  m_Layer: 0
+  m_Name: toxic_attack02
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290836570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290836569}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48280594, y: -0.79744816, z: -71.600334}
+  m_LocalScale: {x: 0.9853187, y: 1.0632643, z: 1}
+  m_Children: []
+  m_Father: {fileID: 350641446}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306428952
 GameObject:
   m_ObjectHideFlags: 0
@@ -17247,6 +17313,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1516977496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516977497}
+  m_Layer: 0
+  m_Name: Flame_attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1516977497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516977496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3800001, y: -0.36, z: -73.47806}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 411638313}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1517012305
 GameObject:
   m_ObjectHideFlags: 0
@@ -18162,7 +18258,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2531645, y: 1}
+    m_SensorSize: {x: 1.25, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class flame_atc : MonoBehaviour
 {
     public GameObject bola_de_fogo;
+    public GameObject Flame_attack;
     // Variável para conhecer quão rápido nós devemos criar novos Asteroides
     public float spawnTime = 2.0f;
 
@@ -22,6 +23,6 @@ public class flame_atc : MonoBehaviour
     void AddEnemy()
     {
         // Criar uma serra
-        Instantiate(bola_de_fogo, transform.position, Quaternion.identity);
+        Instantiate(bola_de_fogo, Flame_attack.transform.position, Quaternion.identity);
     }
 }

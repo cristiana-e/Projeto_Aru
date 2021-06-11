@@ -7,44 +7,24 @@ public class toxic_ball : MonoBehaviour
     public float speed = -5;
     Rigidbody2D rb;
 
-    bool IsCollided = false;
+    //bool IsCollided = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Move();
         Destroy();
-
     }
-
-    void OnCollisionEnter2D(Collision2D outro)
-    {
-        if (outro.gameObject.CompareTag("Soil1"))
-        {
-            IsCollided = true;
-            Move();
-
-        }
-    }
-
     void Move()
     {
-        if (IsCollided == true)
-        {
-            rb.velocity = new Vector2(speed, 0);
-
-        }
-
+        rb.velocity = new Vector2(speed, 0);
     }
 
-    void FixedUpdate()
-    {
-        rb.rotation -= -5.0f;
-    }
 
     void Destroy()
     {
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 10);
     }
 }
 
