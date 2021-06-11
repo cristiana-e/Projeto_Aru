@@ -8,7 +8,7 @@ public class toxic_ball2 : MonoBehaviour
     public float speed = -7;
     Rigidbody2D rb;
 
-    //bool IsCollided = false;
+ 
 
     // Start is called before the first frame update
     void Start()

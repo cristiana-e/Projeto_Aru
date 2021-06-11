@@ -5,14 +5,11 @@ using UnityEngine;
 public class foguinho : MonoBehaviour
 {
     public Rigidbody2D rig;
-    public float velocidade;
-    public float temponadirecao;
-    public float Jump;
-    public float IntervaloJump;
+    public float velocidade = 3.0f;
+    public float temponadirecao = 0.5f;
     float tempo;
-    float ContJump;
+    
 
-    bool IsGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +21,6 @@ public class foguinho : MonoBehaviour
     void Update()
     {
         walk();
-        Jumping();
     }
 
     void walk()
@@ -42,27 +38,16 @@ public class foguinho : MonoBehaviour
         rig.velocity = new Vector2(velocidade, rig.velocity.y);
     }
 
-    void Jumping()
+    
+    void OnTriggerEnter2D(Collider2D outro)
     {
-        ContJump += Time.deltaTime;
+        if (outro.gameObject.tag == "bubble")
+            {
+               Destroy(outro.gameObject);
+               Destroy(this.gameObject);
 
-        if (ContJump >= IntervaloJump && IsGrounded == false)
-        {
-
-            IsGrounded = true;
-
-        }
-
-        rig.AddForce (new Vector2(0f, Jump), ForceMode2D.Impulse);
+            }
     }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 6)
-        {
-            IsGrounded = false;
-        }
-    }
-
+ 
+    
 }

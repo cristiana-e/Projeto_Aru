@@ -9,6 +9,9 @@ TagManager:
   - Wood
   - Tree
   - Aru
+  - Coin
+  - destruir
+  - bubble
   layers:
   - Default
   - TransparentFX

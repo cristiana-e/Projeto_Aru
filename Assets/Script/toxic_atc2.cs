@@ -5,7 +5,7 @@ using UnityEngine;
 public class toxic_atc2 : MonoBehaviour
 {
     public GameObject toxic_ball2;
-    public GameObject toxic_attack01;
+    public GameObject exit01;
     // Variável para conhecer quão rápido nós devemos criar novos Asteroides
     public int spawnTime = 2;
 
@@ -21,6 +21,6 @@ public class toxic_atc2 : MonoBehaviour
     void AddEnemy()
     {
         // Criar ataque
-        Instantiate(toxic_ball2, toxic_attack01.transform.position, Quaternion.identity);
+        Instantiate(toxic_ball2, exit01.transform.position, Quaternion.identity);
     }
 }

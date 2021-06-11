@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public Rigidbody2D rig; //física do player
     public Animator anim; //variável para indicar a animação
     public GameObject bubble;
+    private int vidas = 3;
+
 
     //bool IsJumping;
     bool IsGrounded;
@@ -19,7 +21,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.AddComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -112,4 +114,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    //perde vida
+
+    void OnTriggerEnter2D(Collider2D outro)
+    {
+        if (outro.gameObject.tag == "destruir")
+        {
+            vidas = vidas - 1;
+            Destroy(this.gameObject);
+            Debug.Log("foi o foguinho");
+           
+          //  if (vidas == 0)
+             //   {
+                // vidasUI.text = "Vidas: " + vidas;
+                 Destroy(gameObject);
+              //  }
+        }
+    }   
 }
