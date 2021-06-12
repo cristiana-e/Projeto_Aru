@@ -34,4 +34,11 @@ public class MENU : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void OnClickBack()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+   
 }
