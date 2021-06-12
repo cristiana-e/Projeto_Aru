@@ -25,7 +25,7 @@ public class foguinho : MonoBehaviour
     {
         walk();
     }
-
+    //função Movimentação Flame_move
     void walk()
     {
         tempo += Time.deltaTime;
@@ -41,7 +41,7 @@ public class foguinho : MonoBehaviour
         rig.velocity = new Vector2(velocidade, rig.velocity.y);
     }
 
-    
+    // FUnção destruição flame_move, contador de pontuação e audio quando é destruido
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")

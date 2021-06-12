@@ -15,13 +15,13 @@ public class bola_de_fogo : MonoBehaviour
         Move();
         Destroy();
     }
-
+    //Movimento do prefab bola_de_fogo 
     void Move()
     {
         rb.velocity = new Vector2(speed, 0);
     }
 
-
+    //Destruição do prefab bola_de_fogo, após 2 segundos
     void Destroy()
     {
         Destroy(gameObject, 2);

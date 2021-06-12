@@ -20,7 +20,7 @@ public class Money_Bag : MonoBehaviour
     {
         Move();
     }
-
+    //Função Destruição quando coledir com o chão
     void OnCollisionEnter2D(Collision2D outro)
     {
         if (outro.gameObject.CompareTag("Soil1"))
@@ -29,12 +29,12 @@ public class Money_Bag : MonoBehaviour
 
         }
     }
-
+    //Função Movimentação
     void Move()
     {
             rb.velocity = new Vector2(0, speed);
     }
-
+    //Função Destruição após 4 segundos
     void Destroy()
     {
         Destroy(gameObject, 4);

@@ -25,13 +25,13 @@ public class flame_atc : MonoBehaviour
 
 
 
-    // Nova função para clonar/spawn uma serra
+    // Nova função para clonar/spawn ataque bola_de_fogo
     void AddEnemy()
     {
         // Criar uma serra
         Instantiate(bola_de_fogo, exit_flame.transform.position, Quaternion.identity);
     }
-
+    // Função para destruir flame_atc, depois de 2 ataques, contador de pontos, e audio quando flame_atc perde vida
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")

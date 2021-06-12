@@ -16,17 +16,17 @@ public class wood_boss : MonoBehaviour
         Move();
         
     }
-
+    //função para movimentação
     void Move()
     {
         rb.velocity = new Vector2(speed, 0);
     }
-
+    //função para rolar
     void FixedUpdate()
     {
         rb.rotation -= 5.0f;
     }
-
+    //função para destruir quando fora da cena
     void OnBecameInvisible()
     {
         Destroy(gameObject);

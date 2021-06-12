@@ -6,11 +6,11 @@ public class Tree : MonoBehaviour
 {
 
 
-    private int vidas = 5;
+    private int vidas = 5; //vidas iniciais da arvore
 
 
 
-
+    //função decrementa vidas, e destroi arvore
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")

@@ -18,10 +18,10 @@ public class geizer : MonoBehaviour
       
     }
 
-    // Nova função para clonar/spawn uma serra
+    // Nova função para clonar/spawn geizer
     void AddEnemy()
     {
-         // Criar uma serra
+         // Criar novo acido
         Instantiate(acid, transform.position, Quaternion.identity);
     }
 }

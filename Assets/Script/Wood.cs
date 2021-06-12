@@ -15,7 +15,7 @@ public class Wood : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
   
     }
-
+    //função para informar quando colidir com o solo
     void OnCollisionEnter2D(Collision2D outro)
     {
         if (outro.gameObject.CompareTag("Soil1"))
@@ -25,7 +25,7 @@ public class Wood : MonoBehaviour
             
         }
    }
-
+    //função para movimentação
     void Move()
     {
         if (IsCollided == true)
@@ -35,7 +35,7 @@ public class Wood : MonoBehaviour
         }
         
     }
-
+    //função para rolar
     void FixedUpdate()
     {
         rb.rotation -= -5.0f;

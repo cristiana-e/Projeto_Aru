@@ -33,7 +33,7 @@ public class toxic_atc : MonoBehaviour
         Instantiate(toxic_ball2, exit01.transform.position, Quaternion.identity);
 
     }
-
+    // Função para destruir toxic_atc, depois de 3 ataques, contador de pontos, audio quando toxic_atc perde vida e audio de destruição
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")

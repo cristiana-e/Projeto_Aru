@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
 
 
     }
-
+    //Função ataque
     void Fire()
     {
         if (Input.GetKeyDown("e"))
@@ -127,11 +127,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    //perde vida
+    //funções para perder e ganhar vida, até o limite maximo de 10 vidas
 
     void OnTriggerEnter2D(Collider2D outro)
     {
-
+        //função ganha vida
         if (outro.gameObject.tag == "vida")
         {
             Destroy(outro.gameObject);
@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
             }
 
         }
-
+        //função perde vida, e audio quando ocorrer a colisão e volta ao menu principal
         if (outro.gameObject.tag == "destruir")
         {
             Destroy(outro.gameObject);
@@ -164,7 +164,7 @@ public class Player : MonoBehaviour
             }
         }
 
-
+        //função perde vida, e audio quando ocorrer a colisão e volta ao menu principal
         if (outro.gameObject.tag == "arvore")
         {
 
@@ -182,6 +182,7 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene("MENU");
             }
         }
+        //função zera a vida, e audio quando ocorrer a colisão e volta ao menu principal
         if (outro.gameObject.tag == "dead")
         {
             vidas = 0;
@@ -192,10 +193,8 @@ public class Player : MonoBehaviour
 
 
         }
-        if (outro.gameObject.tag == "Wood")
-        {
-            ptScript.pontos--;
-        }
+
+       
     }
    
 }

@@ -16,7 +16,7 @@ public class Saw : MonoBehaviour
         Move();
         Destroy();
     }
-
+    //Função Movimento
     void Move()
     {
         rb.velocity = new Vector2(speed, 0);

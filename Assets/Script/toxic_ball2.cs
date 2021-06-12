@@ -17,12 +17,13 @@ public class toxic_ball2 : MonoBehaviour
         Move();
         Destroy();
     }
+    //Movimentação toxic_ball
     void Move()
     {
         rb.velocity = new Vector2(speed, 0);
     }
 
-
+    //Destruição toxic_ball2 após 2 segundos
     void Destroy()
     {
         Destroy(gameObject, 2);

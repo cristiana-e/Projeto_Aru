@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class money_attack : MonoBehaviour
 {
-    public int speed = -8;
+    public int speed = -8;//velocidade de saida do ataque
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class money_attack : MonoBehaviour
         Move();
         Destroy();
     }
-
+    //Função movimentação 
     void Move()
     {
         rb.velocity = new Vector2(speed, 0);
@@ -22,7 +22,7 @@ public class money_attack : MonoBehaviour
 
     void Destroy()
     {
-        // Destroi o dinheiro quando sair da cena
+        // Destroi o dinheiro, após 2 segundos
         Destroy(gameObject, 2);
     }
 }

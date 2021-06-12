@@ -12,7 +12,7 @@ public class boss : MonoBehaviour
 
 
 
-
+    //Função para destruir o Boss, utilizando a decrementação da vida, e também os som emitido pelo boss quando derrotado
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")

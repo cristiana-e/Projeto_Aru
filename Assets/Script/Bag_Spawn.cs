@@ -19,7 +19,7 @@ public class Bag_Spawn : MonoBehaviour
     {
 
     }
-
+    // Criador/repetidor de inimigo que Monei_bag
     void AddEnemy()
     {
         Renderer renderer = GetComponent<Renderer>();
