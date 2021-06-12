@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bag_Spawn : MonoBehaviour
 {
-    public float spawnTime = 0.5f;
+    public float spawnTime = 0.8f;
     public GameObject Money_Bag;
 
 
