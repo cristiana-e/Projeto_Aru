@@ -122,6 +122,8 @@ MonoBehaviour:
   bola_de_fogo: {fileID: 5932683139251030462, guid: 58a444eae8f90d548b861fc4372e6cce, type: 3}
   exit_flame: {fileID: 3130222743268382450}
   spawnTime: 2
+  audio_fogo_destroy: {fileID: 8300000, guid: d07db2f28083248499980d026aa86f52, type: 3}
+  audio_fogo_hit: {fileID: 8300000, guid: 4d90991fec287894f802a560a7f4e17b, type: 3}
 --- !u!50 &3130222743942908808
 Rigidbody2D:
   serializedVersion: 4

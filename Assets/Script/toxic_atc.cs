@@ -11,6 +11,8 @@ public class toxic_atc : MonoBehaviour
     public int spawnTime2 = 2;
     public int spawnTime = 5;
     private points ptScript;
+    public AudioClip audio_toxic_destroy;
+    public AudioClip audio_toxic_hit;
 
     private int vidas = 3;
 
@@ -37,12 +39,15 @@ public class toxic_atc : MonoBehaviour
         if (outro.gameObject.tag == "bubble")
         {
             ptScript.pontos++;
+            
             Destroy(outro.gameObject);
             vidas = vidas - 1;
+            AudioSource.PlayClipAtPoint(audio_toxic_hit, transform.position);
 
             if (vidas == 0)
                
             {
+                AudioSource.PlayClipAtPoint(audio_toxic_destroy, transform.position);
                 Destroy(this.gameObject);
             }
         }

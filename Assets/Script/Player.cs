@@ -15,7 +15,12 @@ public class Player : MonoBehaviour
     private int vidas = 10;
     public Text vidasUI;
     private points ptScript;
+    public AudioClip audio_aru_hit;
+    public AudioClip audio_aru_destroy;
+    public AudioClip audio_aru_jump;
 
+
+    //AudioSource.PlayClipAtPoint(audio_aru_hit, transform.position);
 
     //bool IsJumping;
     bool IsGrounded;
@@ -95,6 +100,7 @@ public class Player : MonoBehaviour
             JumpCont =JumpCont-1;
 
             rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+            AudioSource.PlayClipAtPoint(audio_aru_jump, transform.position);
             IsGrounded = false;
             anim.SetInteger("transition", 2);
 
@@ -141,6 +147,7 @@ public class Player : MonoBehaviour
         if (outro.gameObject.tag == "destruir")
         {
             Destroy(outro.gameObject);
+            AudioSource.PlayClipAtPoint(audio_aru_hit, transform.position);
             vidas = vidas - 1;
 
             if (vidas < 0)
@@ -150,8 +157,10 @@ public class Player : MonoBehaviour
 
             if (vidas == 0)
             {
-                // vidasUI.text = "Vidas: " + vidas;
+                
+                AudioSource.PlayClipAtPoint(audio_aru_destroy, transform.position);
                 Destroy(this.gameObject);
+                SceneManager.LoadScene("MENU");
             }
         }
 
@@ -163,11 +172,12 @@ public class Player : MonoBehaviour
             if (vidas < 0)
             {
                 vidas = 0;
+                AudioSource.PlayClipAtPoint(audio_aru_destroy, transform.position);
             }
 
             if (vidas == 0)
             {
-              
+                
                 Destroy(this.gameObject);
                 SceneManager.LoadScene("MENU");
             }
@@ -176,7 +186,7 @@ public class Player : MonoBehaviour
         {
             vidas = 0;
 
-          
+            AudioSource.PlayClipAtPoint(audio_aru_destroy, transform.position);
             Destroy(this.gameObject);
             SceneManager.LoadScene("MENU");
 

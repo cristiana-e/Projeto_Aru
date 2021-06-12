@@ -9,7 +9,9 @@ public class foguinho : MonoBehaviour
     public float temponadirecao = 0.5f;
     float tempo;
     private points ptScript;
+    public AudioClip audio_fogo_destroy;
 
+    //AudioSource.PlayClipAtPoint(audio_fogo_destroy, transform.position);
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class foguinho : MonoBehaviour
         if (outro.gameObject.tag == "bubble")
         {
             ptScript.pontos++;
+            AudioSource.PlayClipAtPoint(audio_fogo_destroy, transform.position);
             Destroy(outro.gameObject);
             Destroy(this.gameObject);
                

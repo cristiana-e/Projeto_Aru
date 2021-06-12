@@ -10,6 +10,9 @@ public class flame_atc : MonoBehaviour
     public float spawnTime = 2.0f;
     private int vidas = 2;
     private points pt;
+    public AudioClip audio_fogo_destroy;
+    public AudioClip audio_fogo_hit;
+
 
 
     // Start is called before the first frame update
@@ -35,12 +38,15 @@ public class flame_atc : MonoBehaviour
         {
             pt.pontos++;
             Destroy(outro.gameObject);
-            
+
+            AudioSource.PlayClipAtPoint(audio_fogo_hit, transform.position);
             vidas = vidas - 1;
+
 
             if (vidas == 0)
 
             {
+                AudioSource.PlayClipAtPoint(audio_fogo_destroy, transform.position);
                 Destroy(this.gameObject);
             }
         }

@@ -168,3 +168,4 @@ MonoBehaviour:
   rig: {fileID: 5699015737704835572}
   velocidade: 3
   temponadirecao: 0.5
+  audio_fogo_destroy: {fileID: 8300000, guid: d07db2f28083248499980d026aa86f52, type: 3}
