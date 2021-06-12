@@ -14,16 +14,12 @@ public class Bubble : MonoBehaviour
         rb.velocity = new Vector2(speed, 0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-     
-
-    }
-
+ 
     void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
+
+  
 
 }

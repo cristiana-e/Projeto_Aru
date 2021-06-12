@@ -8,13 +8,14 @@ public class foguinho : MonoBehaviour
     public float velocidade = 3.0f;
     public float temponadirecao = 0.5f;
     float tempo;
-    
+    private points ptScript;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>(); 
+        rig = GetComponent<Rigidbody2D>();
+        ptScript = GameObject.Find("Points").GetComponent<points>();
     }
 
     // Update is called once per frame
@@ -42,11 +43,13 @@ public class foguinho : MonoBehaviour
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")
-            {
-               Destroy(outro.gameObject);
-               Destroy(this.gameObject);
+        {
+            ptScript.pontos++;
+            Destroy(outro.gameObject);
+            Destroy(this.gameObject);
+               
 
-            }
+        }
     }
  
     

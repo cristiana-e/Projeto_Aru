@@ -6,6 +6,7 @@ public class Tree_Trigger : MonoBehaviour
 {
     public bool IsTrigger = false;
     public GameObject tree;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,10 @@ public class Tree_Trigger : MonoBehaviour
         {
             IsTrigger = true;
         }
+        
     }
+
+        
 
     void OnTriggerExit2D(Collider2D outro)
     {
@@ -49,4 +53,6 @@ public class Tree_Trigger : MonoBehaviour
             tree.gameObject.transform.Rotate(new Vector3(0, 0,-90));
         }
     }
+
+   
 }

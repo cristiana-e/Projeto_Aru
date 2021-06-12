@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +12,9 @@ public class Player : MonoBehaviour
     public Rigidbody2D rig; //física do player
     public Animator anim; //variável para indicar a animação
     public GameObject bubble;
-    private int vidas = 3;
+    private int vidas = 10;
+    public Text vidasUI;
+    private points ptScript;
 
 
     //bool IsJumping;
@@ -22,6 +27,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         gameObject.AddComponent<BoxCollider2D>();
+        ptScript = GameObject.Find("Points").GetComponent<points>();
     }
 
     // Update is called once per frame
@@ -31,6 +37,7 @@ public class Player : MonoBehaviour
         Move();
         InputCheck();
         Fire();
+        vidasUI.text = "Vidas: " + vidas;
 
     }
 
@@ -118,17 +125,67 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D outro)
     {
+
+        if (outro.gameObject.tag == "vida")
+        {
+            Destroy(outro.gameObject);
+            vidas = vidas + 1;
+
+            if (vidas > 10)
+            {
+                vidas = 10;
+            }
+
+        }
+
         if (outro.gameObject.tag == "destruir")
         {
+            Destroy(outro.gameObject);
             vidas = vidas - 1;
-            Destroy(this.gameObject);
-            Debug.Log("foi o foguinho");
-           
-          //  if (vidas == 0)
-             //   {
+
+            if (vidas < 0)
+            {
+                vidas = 0;
+            }
+
+            if (vidas == 0)
+            {
                 // vidasUI.text = "Vidas: " + vidas;
-                 Destroy(gameObject);
-              //  }
+                Destroy(this.gameObject);
+            }
         }
-    }   
+
+
+        if (outro.gameObject.tag == "arvore")
+        {
+
+            vidas = vidas - 2;
+            if (vidas < 0)
+            {
+                vidas = 0;
+            }
+
+            if (vidas == 0)
+            {
+              
+                Destroy(this.gameObject);
+                SceneManager.LoadScene("MENU");
+            }
+        }
+        if (outro.gameObject.tag == "dead")
+        {
+            vidas = 0;
+
+          
+            Destroy(this.gameObject);
+            SceneManager.LoadScene("MENU");
+
+
+        }
+        if (outro.gameObject.tag == "Wood")
+        {
+            ptScript.pontos--;
+        }
+    }
+   
 }

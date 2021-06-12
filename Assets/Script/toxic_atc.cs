@@ -10,6 +10,7 @@ public class toxic_atc : MonoBehaviour
     public GameObject exit01;
     public int spawnTime2 = 2;
     public int spawnTime = 5;
+    private points ptScript;
 
     private int vidas = 3;
 
@@ -19,6 +20,7 @@ public class toxic_atc : MonoBehaviour
         // Chamar a função 'addEnemy' a cada 'spawnTime' segundos
         InvokeRepeating("AddEnemy", 1, spawnTime);
         InvokeRepeating("AddEnemy", 1, spawnTime2);
+        ptScript = GameObject.Find("Points").GetComponent<points>();
     }
 
     // Nova função para clonar/spawn ataque
@@ -34,6 +36,7 @@ public class toxic_atc : MonoBehaviour
     {
         if (outro.gameObject.tag == "bubble")
         {
+            ptScript.pontos++;
             Destroy(outro.gameObject);
             vidas = vidas - 1;
 

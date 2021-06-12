@@ -25,6 +25,6 @@ public class toxic_ball2 : MonoBehaviour
 
     void Destroy()
     {
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 2);
     }
 }

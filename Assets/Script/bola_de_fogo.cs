@@ -24,6 +24,6 @@ public class bola_de_fogo : MonoBehaviour
 
     void Destroy()
     {
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 2);
     }
 }

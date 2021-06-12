@@ -8,6 +8,8 @@ public class flame_atc : MonoBehaviour
     public GameObject exit_flame;
     // Variável para conhecer quão rápido nós devemos criar novos Asteroides
     public float spawnTime = 2.0f;
+    private int vidas = 2;
+    private points pt;
 
 
     // Start is called before the first frame update
@@ -15,8 +17,10 @@ public class flame_atc : MonoBehaviour
     {
         // Chamar a função 'addEnemy' a cada 'spawnTime' segundos
         InvokeRepeating("AddEnemy", 1, spawnTime);
-
+        pt = GameObject.Find("Points").GetComponent<points>();
     }
+
+
 
     // Nova função para clonar/spawn uma serra
     void AddEnemy()
@@ -29,9 +33,16 @@ public class flame_atc : MonoBehaviour
     {
         if (outro.gameObject.tag == "bubble")
         {
+            pt.pontos++;
             Destroy(outro.gameObject);
-            Destroy(this.gameObject);
+            
+            vidas = vidas - 1;
 
+            if (vidas == 0)
+
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
