@@ -12,6 +12,7 @@ public class money_attack : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Move();
+        Destroy();
     }
 
     void Move()
@@ -19,9 +20,9 @@ public class money_attack : MonoBehaviour
         rb.velocity = new Vector2(speed, 0);
     }
 
-    void OnBecameInvisible()
+    void Destroy()
     {
         // Destroi o dinheiro quando sair da cena
-        Destroy(gameObject);
+        Destroy(gameObject, 2);
     }
 }

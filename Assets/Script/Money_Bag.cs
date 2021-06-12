@@ -12,6 +12,7 @@ public class Money_Bag : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Destroy();
 
     }
 
@@ -32,5 +33,10 @@ public class Money_Bag : MonoBehaviour
     void Move()
     {
             rb.velocity = new Vector2(0, speed);
+    }
+
+    void Destroy()
+    {
+        Destroy(gameObject, 4);
     }
 }
