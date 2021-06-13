@@ -6,12 +6,14 @@ public class foguinho : MonoBehaviour
 {
     public Rigidbody2D rig;
     public float velocidade = 3.0f;
-    public float temponadirecao = 0.5f;
+    public float temponadirecao = 0.5f;//quanto tempo ele permanece na direção
     float tempo;
+
+    //audio
     private points ptScript;
     public AudioClip audio_fogo_destroy;
 
-    //AudioSource.PlayClipAtPoint(audio_fogo_destroy, transform.position);
+  
 
     // Start is called before the first frame update
     void Start()

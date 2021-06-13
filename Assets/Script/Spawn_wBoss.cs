@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawn_wBoss : MonoBehaviour
 {
+    //script nao utilizado
     public GameObject wood;
     
     public float spawnTime = 1.0f;
@@ -12,7 +13,7 @@ public class Spawn_wBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Chamar a função 'addEnemy' a cada 'spawnTime' segundos
+       
         InvokeRepeating("AddEnemy", 1, spawnTime);
 
     }
@@ -20,7 +21,7 @@ public class Spawn_wBoss : MonoBehaviour
     
     void AddEnemy()
     {
-        // Variável para armazenar a posição Y do objeto spawn.
+        
         Renderer renderer = GetComponent<Renderer>();
 
         var spawnPoint = new Vector2(transform.position.x, transform.position.y);

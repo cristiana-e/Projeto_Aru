@@ -10,8 +10,8 @@ public class Bubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(speed, 0);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>(); //call rigidbody
+        rb.velocity = new Vector2(speed, 0); //indicate the axis and the speed for the movement 
     }
 
     //Função para destruir ataque do player quando sair da cena 

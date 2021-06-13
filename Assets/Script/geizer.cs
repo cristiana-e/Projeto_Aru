@@ -18,7 +18,7 @@ public class geizer : MonoBehaviour
       
     }
 
-    // Nova função para clonar/spawn geizer
+    // Nova função para clonar/spawn da bola de acido
     void AddEnemy()
     {
          // Criar novo acido

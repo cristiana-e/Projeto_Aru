@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject saw;
-    // Variável para conhecer quão rápido nós devemos criar novos Asteroides
+    // Variável para conhecer quão rápido nós devemos criar novas serras
     public float spawnTime = 5.0f;
 
 

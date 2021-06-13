@@ -8,23 +8,25 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public float speed; // Velocidade do personagem
-    public float JumpForce;
     public Rigidbody2D rig; //física do player
     public Animator anim; //variável para indicar a animação
     public GameObject bubble;
+   
+
     private int vidas = 10;
     public Text vidasUI;
     private points ptScript;
+
+    //audios
     public AudioClip audio_aru_hit;
     public AudioClip audio_aru_destroy;
     public AudioClip audio_aru_jump;
+    public AudioClip audio_aru_life;
 
-
-    //AudioSource.PlayClipAtPoint(audio_aru_hit, transform.position);
-
-    //bool IsJumping;
+    //variaveis para pulo
     bool IsGrounded;
     public int JumpCont = 2;
+    public float JumpForce;//variavel para indicar força do pulo
 
 
 
@@ -81,7 +83,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //C
+    //checando a condição para pulo duplo
     void InputCheck()
     {
         
@@ -135,7 +137,8 @@ public class Player : MonoBehaviour
         if (outro.gameObject.tag == "vida")
         {
             Destroy(outro.gameObject);
-            vidas = vidas + 1;
+            vidas = vidas + 1; 
+            AudioSource.PlayClipAtPoint(audio_aru_life, transform.position);
 
             if (vidas > 10)
             {

@@ -5,7 +5,8 @@ using UnityEngine;
 public class create_coin : MonoBehaviour
 {
     public GameObject coin;
-    public GameObject exit_coin;
+    public GameObject exit_coin;//indicates where's the creation point for the coin
+
     public float spawnTime = 3.0f;
 
     // Start is called before the first frame update
@@ -15,6 +16,8 @@ public class create_coin : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    //create the coin
     void AddEnemy()
     {
         Instantiate(coin, new Vector3(exit_coin.transform.position.x, exit_coin.transform.position.y, exit_coin.transform.position.z), Quaternion.identity);

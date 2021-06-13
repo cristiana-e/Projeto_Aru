@@ -6,10 +6,13 @@ public class flame_atc : MonoBehaviour
 {
     public GameObject bola_de_fogo;
     public GameObject exit_flame;
+
     // Variável para conhecer quão rápido nós devemos criar novos Asteroides
     public float spawnTime = 2.0f;
     private int vidas = 2;
-    private points pt;
+    private points pt;//points allocation 
+
+    //audio 
     public AudioClip audio_fogo_destroy;
     public AudioClip audio_fogo_hit;
 

@@ -19,7 +19,7 @@ public class MENU : MonoBehaviour
             Application.Quit();
         }
     }
-    
+    //funções que chamam as cenas
     public void OnClickStartGame()
     {
         SceneManager.LoadScene("Fase1");

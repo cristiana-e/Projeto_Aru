@@ -11,7 +11,7 @@ public class Bag_Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("AddEnemy", 1, spawnTime);
+        InvokeRepeating("AddEnemy", 1, spawnTime); // Repete o spawn da bolsa de dinheiro a cada spawntime
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Bag_Spawn : MonoBehaviour
     {
 
     }
-    // Criador/repetidor de inimigo que Monei_bag
+    // Criador/clonador da Money_bag
     void AddEnemy()
     {
         Renderer renderer = GetComponent<Renderer>();

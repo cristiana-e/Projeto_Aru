@@ -20,7 +20,8 @@ public class Money_Bag : MonoBehaviour
     {
         Move();
     }
-    //Função Destruição quando coledir com o chão
+
+    //Função Destruição quando colidir com o chão
     void OnCollisionEnter2D(Collision2D outro)
     {
         if (outro.gameObject.CompareTag("Soil1"))

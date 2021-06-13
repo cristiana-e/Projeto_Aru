@@ -51,13 +51,13 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -92,19 +92,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2348}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2924}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3120}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 3340}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -163,69 +163,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 612}
     - Class: 114
-      Script: {instanceID: 1662}
+      Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 2040}
+      Script: {instanceID: 2048}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2348}
     - Class: 114
-      Script: {instanceID: 2528}
+      Script: {instanceID: 2536}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 2694}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2836}
     - Class: 114
-      Script: {instanceID: 2876}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2902}
     - Class: 114
-      Script: {instanceID: 2924}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 2948}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3014}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3120}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3662}
+      Script: {instanceID: 3670}
     - Class: 114
-      Script: {instanceID: 3712}
+      Script: {instanceID: 3720}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3850}
     - Class: 114
-      Script: {instanceID: 3904}
+      Script: {instanceID: 3912}
     - Class: 114
-      Script: {instanceID: 3968}
+      Script: {instanceID: 3976}
     - Class: 114
-      Script: {instanceID: 4270}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 4392}
+      Script: {instanceID: 4400}
     - Class: 114
-      Script: {instanceID: 4660}
+      Script: {instanceID: 4668}
     - Class: 114
-      Script: {instanceID: 4690}
+      Script: {instanceID: 4698}
     - Class: 114
-      Script: {instanceID: 4840}
+      Script: {instanceID: 4848}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 4928}
     - Class: 114
-      Script: {instanceID: 5094}
+      Script: {instanceID: 5102}
     - Class: 114
-      Script: {instanceID: 5614}
+      Script: {instanceID: 5622}
     - Class: 114
-      Script: {instanceID: 5680}
+      Script: {instanceID: 5688}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -272,19 +272,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2348}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2924}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3120}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 3340}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1170,7 +1170,7 @@ ScriptsOnlyBuild:
     className: CinemachineTouchInputMapper
   - hash:
       serializedVersion: 2
-      Hash: 0608284e47c4b5c5029a9f3da77e79b5
+      Hash: ebae8162a93b65c7af5faa728e503aab
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1461,4 +1461,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Fase1.unity
   - Assets/Scenes/Credits.unity
-  playerPath: D:/DOCUMENTOS/UNTANHA/Projeto_Aru.exe
+  playerPath: D:/PROG_II/Untanha/Untanha.exe

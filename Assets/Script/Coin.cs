@@ -7,20 +7,21 @@ public class Coin : MonoBehaviour
     public float speed = -5;
     Rigidbody2D rb;
 
+    //check the collision
     bool IsCollided = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); //get rigidbody
 
     }
 
     void OnCollisionEnter2D(Collision2D outro)
     {
-        if (outro.gameObject.CompareTag("Soil1"))
+        if (outro.gameObject.CompareTag("Soil1")) //checking if the coin is in collision with the ground
         {
-            IsCollided = true;
+            IsCollided = true;// get a true value for the collision with the ground
             Move();
 
         }
@@ -30,7 +31,7 @@ public class Coin : MonoBehaviour
     {
         if (IsCollided == true)
         {
-            rb.velocity = new Vector2(speed, 0);
+            rb.velocity = new Vector2(speed, 0); //move at 'x' axis if is collided with the ground
 
         }
 
@@ -38,7 +39,7 @@ public class Coin : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.rotation -= -5.0f;
+        rb.rotation -= -5.0f; //coin rotation movement
     }
 }
 

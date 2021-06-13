@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class boss : MonoBehaviour
 {
-    public int vidas = 50;
+    public int vidas = 50; //variavel para a vida (bixo bruto)
+
+    //variaveis de audio
     public AudioClip audio_boss_hit;
     public AudioClip audio_boss_destroy;
 
