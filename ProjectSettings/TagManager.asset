@@ -17,11 +17,13 @@ TagManager:
   - tree
   - arvore
   - vida
+  - cry
+  - bolha
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bubble
   - Water
   - UI
   - Ground

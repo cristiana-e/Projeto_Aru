@@ -6,11 +6,17 @@ public class Bubble : MonoBehaviour
 {
     public GameObject bubble; // A ser preenchido via Inspector com o prefab bubble
     public int speed = 10;  // Velocidade de saida do ataque do player
+    public Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>(); //call rigidbody
+
+        rb = GetComponent<Rigidbody2D>();
+        
+    }
+    void Update()
+    {
         rb.velocity = new Vector2(speed, 0); //indicate the axis and the speed for the movement 
     }
 
@@ -19,7 +25,5 @@ public class Bubble : MonoBehaviour
     {
         Destroy(gameObject, 3);
     }
-
-  
 
 }

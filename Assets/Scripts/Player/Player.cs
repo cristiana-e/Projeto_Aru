@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public Text vidasUI;
     private points ptScript;
 
+    public bool isAfraid=true;
+
     //audios
     public AudioClip audio_aru_hit;
     public AudioClip audio_aru_destroy;
@@ -70,6 +72,7 @@ public class Player : MonoBehaviour
             {
                 transform.eulerAngles = new Vector2(0f, 180f);
                 anim.SetInteger("transition", 1);
+                
             }
         }
 
@@ -77,12 +80,12 @@ public class Player : MonoBehaviour
         {
             if (IsGrounded == true )  //Para nao sobressair a animacao do pulo
             {
-                anim.SetInteger("transition", 0);
+                if (isAfraid == true) anim.SetInteger("transition", 7);
+                else anim.SetInteger("transition", 0);
             }
 
         }
     }
-
     //checando a condi��o para pulo duplo
     void InputCheck()
     {
@@ -133,6 +136,10 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D outro)
     {
+        //condicão para trocar a animação de idle do choro para normal
+        if (outro.gameObject.tag == "cry"){
+           isAfraid=false;
+       }
         //fun��o ganha vida
         if (outro.gameObject.tag == "vida")
         {

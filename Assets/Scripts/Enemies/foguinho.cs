@@ -6,7 +6,7 @@ public class foguinho : MonoBehaviour
 {
     public Rigidbody2D rig;
     public float velocidade = 3.0f;
-    public float temponadirecao = 0.5f;//quanto tempo ele permanece na direção
+    public float temponadirecao = 0.5f;//quanto tempo ele permanece na direï¿½ï¿½o
     float tempo;
 
     //audio
@@ -27,7 +27,7 @@ public class foguinho : MonoBehaviour
     {
         walk();
     }
-    //função Movimentação Flame_move
+    //funï¿½ï¿½o Movimentaï¿½ï¿½o Flame_move
     void walk()
     {
         tempo += Time.deltaTime;
@@ -43,7 +43,7 @@ public class foguinho : MonoBehaviour
         rig.velocity = new Vector2(velocidade, rig.velocity.y);
     }
 
-    // FUnção destruição flame_move, contador de pontuação e audio quando é destruido
+    // FUnï¿½ï¿½o destruiï¿½ï¿½o flame_move, contador de pontuaï¿½ï¿½o e audio quando ï¿½ destruido
     void OnTriggerEnter2D(Collider2D outro)
     {
         if (outro.gameObject.tag == "bubble")

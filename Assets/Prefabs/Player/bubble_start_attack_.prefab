@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3729160020478045603}
   - component: {fileID: 3729160020478045606}
   - component: {fileID: 3729160020478045605}
-  - component: {fileID: 3729160020478045602}
   - component: {fileID: 3730894003174017468}
+  - component: {fileID: 6849614005966948857}
   m_Layer: 0
   m_Name: bubble_start_attack_
   m_TagString: bubble
@@ -121,11 +121,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729160020478045601}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -134,20 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3729160020478045602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3729160020478045601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f570676bc5d094f82e7b30d34f82ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubble: {fileID: 3729160020478045601}
-  speed: 10
 --- !u!82 &3730894003174017468
 AudioSource:
   m_ObjectHideFlags: 0
@@ -244,3 +230,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6849614005966948857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729160020478045601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f570676bc5d094f82e7b30d34f82ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubble: {fileID: 3729160020478045601}
+  speed: 10
+  rb: {fileID: 3729160020478045605}

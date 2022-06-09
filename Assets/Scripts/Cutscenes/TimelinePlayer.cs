@@ -1,30 +1,35 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
  
 public class TimelinePlayer : MonoBehaviour
 {
-    public PlayableDirector timeline;
+    public PlayableDirector director;
  
+    
+    void Awake(){
+        director = GetComponent<PlayableDirector>();
+    }
     // Use this for initialization
     void Start()
     {
-        timeline = GetComponent<PlayableDirector>();
+        
     }
  
  
-    void OnTriggerExit(Collider c)
+    void OnTriggerExit2D(Collider2D outro)
     {
-        if (c.gameObject.tag == "Aru")
+        if (outro.gameObject.tag == "Aru")
         {
-            timeline.Stop();
+            director.Stop();
         }
     }
  
-    void OnTriggerEnter(Collider c)
+    void OnTriggerEnter2D(Collider2D outro)
     {
-        if (c.gameObject.tag == "Ary")
+        if (outro.gameObject.tag == "Aru")
         {
-            timeline.Play();
+            director.Play();
         }
     }
 }
